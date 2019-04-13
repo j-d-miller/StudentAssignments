@@ -10,9 +10,12 @@ To use this app:
 4. Get a Google key.
 5. Set Google permissions to allow geocoding, distance matrix, and map queries.
 6. In RStudio, install these libraries from CRAN:
+  - lpSolve
   - ggmap
   - readxl
   - writexl
   - shiny
 7. In RStudio, install the library d96assign from git-hub:
+  - install_github("j-d-miller/d96assign")
+8. 
   
