@@ -7,8 +7,8 @@ To use this app:
 1. Install R.
 2. Install RStudio.
 3. Create a Google account.
-4. Get a Google key.
-5. Set Google permissions to allow geocoding, distance matrix, and map queries.
+4. Get a Google API key.
+5. Set Google API permissions to allow geocoding, distance matrix, and map queries.
 6. In RStudio, install these libraries from CRAN:
   - devtools
   - lpSolve
