@@ -1,6 +1,6 @@
 # StudentAssignments
 
-Shiny app that calls the d96assign package to assign students to schools. 
+Shiny app that calls the d96assign package to assign students to schools. Download the app to your desktop by 
 
 0. To run the app, you need to create an excel spreadsheet with student names and addresses. The format of this file should be identical to the sample file KEnrollTemplate.xlsx. I created KEnrollTemplate.xlsx by randomly assigning fake names to addresses. The eight columuns of your input file should have exactly the same names as the eight columns of KEnrollTemplate.xls: 
 
