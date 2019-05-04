@@ -2,11 +2,15 @@
 
 Shiny app that calls the d96assign package to assign students to schools. 
 
-0. To run the app, you need to create an excel spreadsheet with student names and addresses. The format of this file should be identical to the sample file KEnrollTemplate.xls. I created KEnrollTemplate.xls by taking made up names and randomly assigning them to addresses. The names and addresses in this file do not correspond those of actual or former students. The eight columuns of your input file should have exactly the same names as the eight columns of KEnrollTemplate.xls: 
+0. To run the app, you need to create an excel spreadsheet with student names and addresses. The format of this file should be identical to the sample file KEnrollTemplate.xlsx. I created KEnrollTemplate.xlsx by randomly assigning fake names to addresses. The eight columuns of your input file should have exactly the same names as the eight columns of KEnrollTemplate.xls: 
 
-Student	UID	Siblings	Street	Apartment	City	State	Zip
+Student,	UID,	Siblings,	Street,	Apartment,	City,	State,	Zip
 
-The content of your input file should be self explanatory. Note: if an address has an apartment number or a unit number or anything similiar, put this info in the Apartment column. Do not put it in the Street column - Google doesn't always handle apartment numbers correctly when they are in a Street address.   
+After look at the template, KEnrollTemplate.xlsx, the content of your input file should be self explanatory. 
+
+The UID column can have any kind of uniqueid.  
+
+Note: if an address has an apartment number or a unit number or anything similiar, put this info in the Apartment column. Do not put it in the Street column - Google doesn't always handle apartment numbers correctly when they are in a Street address.   
 
 After you have your input file, you install the app like this: 
 
@@ -44,5 +48,3 @@ On  as follows the lefthand side of the app, click the Browse button and load yo
 
 14. 
 
-
-13. 
