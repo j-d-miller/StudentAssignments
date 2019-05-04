@@ -45,6 +45,8 @@ After you have created you input file and you have installed the app, you can ru
 On  as follows the lefthand side of the app, click the Browse button and load your input file. After your file loads, you should see it on the righthand side of the app under the Student Addresses pane. Next, click the Calculate Distance Matrix button. The app will then calculate the walking distances from each student to each school and put the results in a time stamped file called distMat-[date-time].xlsx. 
 
 13. On the lefthand side of the app, load the distance matrix file (browse to the appropriate file). 
+As soon as the distanve matrix is loaded, the app will automatically assign students to the closest school. You will see this assignmemnt on the map. 
 
-14. 
+14. You can impose constraints on the number of students at schools using the slider buttons on the left of the app. Note that not all constraints are possible. 
+
 
