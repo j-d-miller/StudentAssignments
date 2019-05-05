@@ -4,7 +4,7 @@ This is a shiny app that calls the d96assign package to assign students to schoo
 
 Here, in excessive detail, is what you need to do to use this app: 
 
-0. Download the app by clicking the "Clone or Download" button and then select "download zip". The zipfile that you download contains the app and two data file templates.   
+0. Download the app by clicking the "Clone or Download" button and then select "download zip". The zipfile that you download contains the app as well as two data file templates.   
 
 1. To use the app, you need to create an excel spreadsheet with the names and addresses of incoming students. The format of your file should be identical to the sample file StudentAddressesTemplate.xlsx located in the directory inst/extdata. I created StudentAddressesTemplate.xlsx by randomly assigning fake names to addresses. The eight columns of your input file should have the same names as the eight columns of StudentAddressesTemplate.xlxs: 
 
