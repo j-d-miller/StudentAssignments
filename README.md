@@ -6,7 +6,7 @@ Here, in excessive detail, is what you need to do to use this app:
 
 0. Download the app by clicking the "Clone or Download" button and then select "download zip". The zipfile that you download contains the app as well as two data file templates.   
 
-1. To use the app, you need to create an excel spreadsheet with the names and addresses of incoming students. The format of your file should be identical to the sample file StudentAddressesTemplate.xlsx located in the directory inst/extdata. I created StudentAddressesTemplate.xlsx by randomly assigning fake names to addresses. The eight columns of your input file should have the same names as the eight columns of StudentAddressesTemplate.xlxs: 
+1. Create an excel spreadsheet with the names and addresses of incoming students. The format of your file should be identical to the sample file StudentAddressesTemplate.xlsx located in the directory inst/extdata. I created StudentAddressesTemplate.xlsx by randomly assigning fake names to real addresses. The eight columns of your input file should have exactly the same names as the eight columns of StudentAddressesTemplate.xlxs: 
 
 Student,    UID,    Siblings,    Street,    Apartment,    City,    State,    Zip
 
@@ -14,13 +14,13 @@ The content of StudentAddressesTemplate.xlxs (and your version, containing real 
 
 Two things to note: 1) the UID column can have any character uniqueid and 2) if an address has an apartment number or a unit number or anything similar, put this info in the Apartment column. Do not put it in the Street column - Google doesn't always handle apartment numbers correctly when they are in a Street address.   
 
-After you have made your input file of student names and addresses, you need to create the distance matrix of walking distances from each address to each school. The app will do this for you, by calling the Google maps API.  To call the Google API  you need a (free) Google key. To get the key:   
+After you have made your input file of student names and addresses, you need to create the distance matrix of the walking distances from each address to each school. The app will do this for you, by calling the Google maps API.  To call the Google API  you need a (free) Google key. To get the key:   
 
 2. Create a Google account.
 3. Get a Google API key.
 4. Set Google API permissions to allow geocoding, distance matrix, and map queries.
 
-Last, you need to: 
+Once you have your google key, you need to: 
 
 5. Install R: 
 
@@ -32,7 +32,7 @@ and
 
 https://www.rstudio.com
 
-Once you have RStudio, open it and 
+Once you have installed RStudio, open it and 
 
 7. Install these libraries:
 
@@ -55,19 +55,21 @@ and
 
   - install_github("j-d-miller/d96assign")
   
-The d96assign library contains the function that assigns students to schools. It does so by minimizing total walking distance, subject to user-imposed constraints on the number of students that can be accommodated at each school. The underlying algorithm is a mixed integer linear program. 
+The d96assign library contains the function that assigns students to schools. This function minimizes total student walking distance, subject to user-imposed constraints on the number of students that can be accommodated at each school. The underlying algorithm calls a mixed integer linear program, lpSolve. 
   
 Next,  
 
-10. In RStudio, open the StudentAssignments project (in the directory that you downloaded in step 0).  
+10. In RStudio, open the StudentAssignments project (in the directory that you downloaded in step 0).
+
+Then, 
 
 11. In the StudentAssignments project, open the file app.R and replace "yourgooglekeygoeshere" with the google key you got in step 3 with this line: 
 
 register_google(key = "yourgooglekeygoeshere") 
 
-You are now ready to run the app: 
+You can now run the app,  
 
-12. In RStudio, run the shiny app (click the button at the top which says "Run"). Make sure that when you run the app, you choose the "Run in Window" option. 
+12. Click the button at the top which says "Run". Make sure that when you run the app, you choose the "Run in Window" option. 
 
 13. If you have not already created the distance matrix file, create it. (If you have already created the distance matrix file, skip this step):
 
