@@ -1,6 +1,6 @@
 # StudentAssignments
 
-Shiny app that calls the d96assign package to assign students to schools. 
+This is a shiny app that calls the d96assign package to assign students to schools in Riverside School District 96. 
 
 Here, in excessive detail, is what you need to do to use this app: 
 
