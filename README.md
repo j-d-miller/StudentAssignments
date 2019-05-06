@@ -63,9 +63,9 @@ Next,
 
 Then, 
 
-11. In the StudentAssignments project, open the file app.R and replace "yourgooglekeygoeshere" with the google key you got in step 3 with this line: 
+11. In the StudentAssignments project, open the file app.R and replace "yourkeygoeshere" with the google key you got in step 3 with this line: 
 
-register_google(key = "yourgooglekeygoeshere") 
+register_google(key = "yourkeygoeshere") 
 
 You can now run the app,  
 
