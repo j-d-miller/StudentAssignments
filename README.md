@@ -53,7 +53,7 @@ and
 
 9. Install the library d96assign from git-hub:
 
-  - install_github("j-d-miller/d96assign")
+  install_github("j-d-miller/d96assign")
   
 The d96assign library contains the function that assigns students to schools. This function minimizes total student walking distance, subject to user-imposed constraints on the number of students that can be accommodated at each school. The underlying algorithm calls a mixed integer linear program, lpSolve. 
   
