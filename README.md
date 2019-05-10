@@ -8,7 +8,7 @@ Here, in excessive detail, is what you need to do to use this app:
 
 1. Create an excel spreadsheet with the names and addresses of incoming students. The format of your file should be identical to the sample file StudentAddressesTemplate.xlsx located in the directory inst/extdata. I created StudentAddressesTemplate.xlsx by randomly assigning fake names to real addresses. The eight columns of your input file should have exactly the same names as the eight columns of StudentAddressesTemplate.xlxs: 
 
-Student,    UID,    Siblings,    Street,    Apartment,    City,    State,    Zip
+Last, First,  UID,    Siblings,    Street,    Apartment,    City,    State,    Zip, Notes
 
 The content of StudentAddressesTemplate.xlxs (and your version, containing real data) should be self-explanatory. 
 
@@ -81,4 +81,9 @@ Next, click the Calculate Distance Matrix button. The app will then get the walk
 
 15. You can now impose constraints on the number of students at schools using the slider buttons on the left of the app. Note that not all constraints are possible. 
 
+16. If you want to reinstall an updated version of d96assign, but do not wish to update R and RStudio, delete the old d96assign package by clicking the crossmark to the right of d96assign in the package section of RStudio, then run these two lines at the command line in RStudio:  
 
+  library(devtools)
+  install_github("j-d-miller/d96assign")
+  
+ 17. Likewise, to get a newer version of the StudentAsignments app, follow the instructions in step 0 above. 
