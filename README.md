@@ -2,6 +2,8 @@
 
 This is a shiny app that calls the d96assign package to assign students to schools in Riverside School District 96. 
 
+The app uses David Kahle's excellent ggmap package to geocode student addresses and to calculate walking distances between homes and schools. ggmap, in turn, calls Google's geocoding and distance matrix API. The assignment uses a mixed integer linear program (lpSolve), as described in the d96assign README file, to minimize total student walking distance, subject to space constraints at each school.
+
 Here, in excessive detail, is what you need to do to use this app: 
 
 0. Download the app by clicking the "Clone or Download" button and then select "download zip". The zipfile that you download contains the app as well as two data file templates.   
@@ -86,4 +88,4 @@ Next, click the Calculate Distance Matrix button. The app will then get the walk
   library(devtools)
   install_github("j-d-miller/d96assign")
   
- 17. Likewise, to get a newer version of the StudentAsignments app, follow the instructions in step 0 above. 
+ 17. Likewise, to get a new version of the StudentAsignments app, follow the instructions in step 0 and 11 above. 
