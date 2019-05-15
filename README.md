@@ -10,7 +10,7 @@ Here, in excessive detail, is what you need to do to use this app:
 
 1. Create an excel spreadsheet with the names and addresses of incoming students. The format of your file should be identical to the sample file StudentAddressesTemplate.xlsx located in the directory inst/extdata. I created StudentAddressesTemplate.xlsx by randomly assigning fake names to real addresses. The eight columns of your input file should have exactly the same names as the eight columns of StudentAddressesTemplate.xlxs: 
 
-Last, First,  UID,    Siblings,    Street,    Apartment,    City,    State,    Zip, Notes
+Last, First,  Siblings,    Street,    Apartment,    City,    State,    Zip, Notes
 
 The content of StudentAddressesTemplate.xlxs (and your version, containing real data) should be self-explanatory. 
 
