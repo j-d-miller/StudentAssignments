@@ -2,7 +2,7 @@
 
 This is a shiny app that calls the d96assign package to assign students to schools in Riverside School District 96. 
 
-The app uses David Kahle's ggmap package to geocode student addresses and to calculate walking distances between homes and schools, using Google's geocoding and distance matrix API. The assignment algorithm uses a mixed integer linear program (lpSolve), as described in the d96assign README file, to minimize total student walking distance, subject to space constraints at each school.
+The app uses David Kahle's ggmap package to geocode student addresses and to calculate walking distances between homes and schools. The ggmap package gets the necessary data from Google's geocoding and distance matrix API. The assignment algorithm uses a mixed integer linear program (lpSolve), as described in the d96assign README file, to minimize total student walking distance, subject to space constraints at each school.
 
 Here, in excessive detail, is what you need to do to use this app: 
 
