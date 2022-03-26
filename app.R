@@ -15,6 +15,9 @@ library(writexl)
 
 register_google(key = "yourkeygoeshere")
 
+riversideMap <- qmap('Riverside,IL', zoom = 14, legend = 'topleft')
+riversideMapBW <- qmap('Riverside,IL', zoom = 14, legend = 'topleft',color = 'bw')
+
 ui <- fluidPage(
   
   # Title
@@ -181,7 +184,7 @@ server <- function(input, output) {
       if(defaultAssign$status == 0){
 
         plotAssign(defaultAssign$assignment, what = "Assignment", ptitle = "",   
-                    dsize = 3, print_map = F) } else 
+                    dsize = 3, print_map = F, googMap = riversideMap) } else 
                      {riversideMapBW}
     }
   })
@@ -200,7 +203,6 @@ server <- function(input, output) {
         row.names(tassign) <- NULL
         tassign[,c ("Ames", "Blythe",  "Central", "Hollywood")] <- round(tassign[,c ("Ames", "Blythe",  "Central", "Hollywood")],1)
         
- #       brushedPoints(tassign[,c("Student", "Street","City","Assignment", "Siblings", "Ames", "Blythe",  "Central", "Hollywood","lat", "lon")], brush =  input$distPlot_brush, xvar = "lon", yvar = "lat")
         brushedPoints(tassign[,c("Last","First","Street","City","Assignment", "Siblings", "Ames", "Blythe",  "Central", "Hollywood","lat", "lon")], brush =  input$distPlot_brush, xvar = "lon", yvar = "lat")
         }
     }
@@ -228,7 +230,6 @@ server <- function(input, output) {
       if(currentAssign()$status==0){
         defaultAssign <- currentAssign()$assignment
   
-#       defaultAssign[,c("Student", "Street", "City", "Assignment", "Siblings", "Ames",	"Blythe",	"Central","Hollywood") ] } else{NULL}
         defaultAssign[,c("Last", "First", "Street", "City", "Assignment", "Siblings", "Ames",	"Blythe",	"Central","Hollywood") ] } else{NULL}
     }
   } ,rownames = F, digits = 1)
@@ -238,7 +239,6 @@ server <- function(input, output) {
   output$table2 <- renderTable({
     tmp <- kgDist()
     
-#    tmp[,c("Student", "Street","City", "Siblings", "Ames", "Blythe",  "Central", "Hollywood","lat", "lon")]
     tmp[,c("Last", "First", "Street","City", "Siblings", "Ames", "Blythe",  "Central", "Hollywood","lat", "lon")]
   },rownames = F, digits = 1)
   
