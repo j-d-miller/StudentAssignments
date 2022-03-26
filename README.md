@@ -86,6 +86,7 @@ Next, click the Calculate Distance Matrix button. The app will then get the walk
 16. If you want to reinstall an updated version of d96assign, but do not wish to update R and RStudio, delete the old d96assign package by clicking the crossmark to the right of d96assign in the package section of RStudio, then run these two lines at the command line in RStudio:  
 
   library(devtools)
+  
   install_github("j-d-miller/d96assign")
   
  17. Likewise, to get a new version of the StudentAsignments app, follow the instructions in step 0 and 11 above. 
